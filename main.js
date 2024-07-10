@@ -23,8 +23,13 @@ let ubahTema = document.getElementById("ubahTema");
 let value="";
 tombolNol.addEventListener('click',()=>{
     console.log(layarKalkulator.innerHTML);
-    if (layarKalkulator.innerHTML =="0" || layarKalkulator.innerHTML=="invalid" || layarKalkulator.innerHTML == "undefined"){
+    if (layarKalkulator.innerHTML =="0" ){
         return;
+    }
+    if( layarKalkulator.innerHTML=="invalid" || layarKalkulator.innerHTML == "undefined" || layarKalkulator.innerHTML == "Infinity") {
+        value='0';
+        return layarKalkulator.innerHTML='0';
+
     }
     value+="0";
     layarKalkulator.innerHTML=value;
